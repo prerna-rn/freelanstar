@@ -1,22 +1,21 @@
 import { Slider } from "infinite-react-carousel/lib";
 import "./Gig.scss";
 import { Link } from "react-router-dom";
+import userImage from "/img/user.png"; // Import the image
 
-const profile =
-  "https://raw.githubusercontent.com/vikas-parmar/vikas-parmar.github.io/main/assets/portrait-1.png";
-
+const profile = userImage
 function Gig() {
   return (
     <div className="gig">
       <div className="container">
         <div className="left">
           <span className="breadcrumbs">
-            Fiverr / Programming & Tech / Website Development / Custom Websites
+            FreelanStars / Programming & Tech / Website Development / Custom Websites
           </span>
           <h1>I will craft stunning reactjs web applications for you</h1>
           <div className="user">
             <img className="pp" src={profile} alt="" />
-            <span>Vikas Parmar</span>
+            <span>Prerna</span>
             <div className="stars">
               <img src="/img/star.png" alt="" />
               <img src="/img/star.png" alt="" />
@@ -74,7 +73,7 @@ function Gig() {
             <div className="user">
               <img src={profile} alt="" />
               <div className="info">
-                <span>Vikas Parmar</span>
+                <span>Prerna</span>
                 <div className="stars">
                   <img src="/img/star.png" alt="" />
                   <img src="/img/star.png" alt="" />
@@ -83,7 +82,7 @@ function Gig() {
                   <img src="/img/star.png" alt="" />
                   <span>5</span>
                 </div>
-                <Link to="https://vikas-parmar.github.io/" target="_blank">
+                <Link to="https://github.com/prerna-rn" target="_blank">
                   <button>Contact Me</button>
                 </Link>
               </div>

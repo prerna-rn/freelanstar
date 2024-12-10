@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.scss";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
 
   const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -19,12 +21,24 @@ const Navbar = () => {
     };
   }, []);
 
-  // const currentUser = null
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem('currentUser'));
+    setCurrentUser(user);
+  }, []);
 
-  const currentUser = {
-    id: 1,
-    username: "vikasparmar",
-    isSeller: true,
+  const handleLogout = () => {
+    localStorage.removeItem('currentUser');
+    setCurrentUser(null);
+    navigate('/'); // Redirect to homepage or any other page
+  };
+
+  const getUserImage = () => {
+    if (currentUser?.username === 'prerna') {
+      return 'public/img/user.png';
+    } else if (currentUser?.username === 'anne') {
+      return 'public/img/woman.png';
+    }
+    return 'public/img/default.png'; // Default image if needed
   };
 
   return (
@@ -32,21 +46,17 @@ const Navbar = () => {
       <div className="container">
         <div className="logo">
           <Link className="link" to="/">
-            <span className="text">fiverr</span>
+            <span className="text">FreelanStars</span>
           </Link>
           <span className="dot">.</span>
         </div>
         <div className="links">
-          <span>Fiverr Business</span>
+          <span>FreelanStars Business</span>
           <span>Explore</span>
           <span>English</span>
-          {!currentUser?.isSeller && <span>Become a Seller</span>}
           {currentUser ? (
             <div className="user" onClick={() => setOpen(!open)}>
-              <img
-                src="https://raw.githubusercontent.com/vikas-parmar/vikas-parmar.github.io/main/assets/portrait-1.png"
-                alt=""
-              />
+              <img src={getUserImage()} alt="User" />
               <span>{currentUser?.username}</span>
               {open && (
                 <div className="options">
@@ -66,15 +76,17 @@ const Navbar = () => {
                   <Link className="link" to="/messages">
                     Messages
                   </Link>
-                  <Link className="link" to="/">
+                  <span className="link" onClick={handleLogout}>
                     Logout
-                  </Link>
+                  </span>
                 </div>
               )}
             </div>
           ) : (
             <>
-              <span>Sign in</span>
+              <Link className="link" to="/login">
+                <span>Sign in</span>
+              </Link>
               <Link className="link" to="/register">
                 <button>Join</button>
               </Link>

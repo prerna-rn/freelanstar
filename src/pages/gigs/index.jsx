@@ -23,11 +23,11 @@ function Gigs() {
     <div className="gigs">
       <div className="container">
         <span className="breadcrumbs">
-          Fiverr  / Graphics & Design  / 
+          FreelanStars  / Graphics & Design  / 
         </span>
         <h1>AI Artists</h1>
         <p>
-          Explore the boundaries of art and technology with {"Fiverr's"} AI
+          Explore the boundaries of art and technology with {"FreelanStars's"} AI
           artists
         </p>
         <div className="menu">

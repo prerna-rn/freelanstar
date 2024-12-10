@@ -1,0 +1,14 @@
+.resultsPage {
+    padding: 50px;
+  }
+  
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .gigCard {
+    flex: 1 1 calc(33.333% - 20px); /* Adjust the width as needed */
+    box-sizing: border-box;
+  }

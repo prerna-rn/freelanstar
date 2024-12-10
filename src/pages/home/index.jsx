@@ -37,7 +37,7 @@ function Home() {
               Pay when {"you're"} happy
             </div>
             <p>
-              AUpfront quotes mean no surprises. Payments only get released when
+              An Upfront quotes mean no surprises. Payments only get released when
               you approve.
             </p>
             <div className="title">
@@ -146,7 +146,7 @@ function Home() {
         <div className="container">
           <div className="item">
             <h1>
-              Fiverr <i>business</i>
+              FreelanStars <i>business</i>
             </h1>
             <h1>
               A business solution designed for <i>teams</i>
@@ -169,7 +169,7 @@ function Home() {
               <img src="./img/check.png" alt="" />
               Manage teamwork and boost productivity with one powerful workspace
             </div>
-            <button>Explore Fiverr Business</button>
+            <button>Explore FreelanStars Business</button>
           </div>
           <div className="item">
             <img

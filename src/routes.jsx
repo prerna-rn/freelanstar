@@ -11,6 +11,7 @@ import {
   Messages,
   Message,
   MyGigs,
+  SearchResults, // Import SearchResults correctly
 } from "@/pages";
 
 const Layout = () => {
@@ -60,6 +61,10 @@ export const routes = createBrowserRouter([
         path: "/gig/:id",
         element: <Gig />,
       },
+      {
+        path: "/search",
+        element: <SearchResults />, // Ensure this is correctly added
+      },
     ],
   },
   {
@@ -69,5 +74,9 @@ export const routes = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "*",
+    element: <Home />, // Fallback route for unmatched paths
   },
 ]);

@@ -8,3 +8,4 @@ export { default as Messages } from "./messages";
 export { default as MyGigs } from "./myGigs";
 export { default as Orders } from "./orders";
 export { default as Register } from "./register";
+export {default as SearchResults} from "./SearchResults";

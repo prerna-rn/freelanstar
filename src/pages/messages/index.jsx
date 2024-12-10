@@ -4,14 +4,9 @@ import "./Messages.scss";
 const Messages = () => {
   const currentUser = {
     id: 1,
-    username: "vikasparmar",
+    username: "prerna",
     isSeller: true,
   };
-
-  const message = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-  maxime cum corporis esse aspernatur laborum dolorum? Animi
-  molestias aliquam, cum nesciunt, aut, ut quam vitae saepe repellat
-  nobis praesentium placeat.`;
 
   return (
     <div className="messages">
@@ -27,10 +22,10 @@ const Messages = () => {
             <th>Action</th>
           </tr>
           <tr className="active">
-            <td>Harsh Beniwal</td>
+            <td>Arjun Patel</td>
             <td>
               <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
+                &quot;Hey, I loved the website you developed. Can you make some changes?&quot;
               </Link>
             </td>
             <td>1 hour ago</td>
@@ -39,11 +34,10 @@ const Messages = () => {
             </td>
           </tr>
           <tr className="active">
-            <td>Nishchay Malhan</td>
-
+            <td>Sneha Sharma</td>
             <td>
               <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
+                &quot;The AI chatbot is working great! But I need help with the deployment.&quot;
               </Link>
             </td>
             <td>2 hours ago</td>
@@ -52,26 +46,28 @@ const Messages = () => {
             </td>
           </tr>
           <tr>
-            <td>Elinor Good</td>
+            <td>Ravi Kumar</td>
             <td>
               <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
+                &quot;Could you explain the details of your web scraping project to me?&quot;
               </Link>
             </td>
             <td>1 day ago</td>
           </tr>
           <tr>
-            <td>Mahesh Keshwala</td>
+            <td>Priya Verma</td>
             <td>
               <Link to="/message/123" className="link">
-                {message.substring(0, 100)}...
+                &quot;I have a few questions about the Python tool you built for data analysis.&quot;
               </Link>
             </td>
             <td>2 days ago</td>
           </tr>
           <tr>
-            <td>Dhiru Monchik</td>
-            <td>{message.substring(0, 100)}</td>
+            <td>Vikram Singh</td>
+            <td>
+              &quot;I need some assistance with integrating the AI model into my application.&quot;
+            </td>
             <td>1 week ago</td>
           </tr>
         </table>
